@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Arboretum Scorepad</string>
+    <string name="start">New Game</string>
+    <string name="history">View History</string>
+    <string name="p1">Player 1</string>
+    <string name="p4">Player 4</string>
+    <string name="p3">Player 3</string>
+    <string name="p2">Player 2</string>
+    <string name="submit">Submit</string>
+</resources>

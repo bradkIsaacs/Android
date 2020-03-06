@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FontChooser</string>
+    <string name="alpha">Alpha: 255</string>
+    <string name="red">Red: 0</string>
+    <string name="green">Green: 0</string>
+    <string name="blue">Blue: 0</string>
+    <string name="play">Sample Text</string>
+    <string name="size">Size: 12</string>
+    <string name="Default">Default</string>
+    <string name="Serif">Serif</string>
+    <string name="Sans_Serif">Sans_Serif</string>
+    <string name="Default_Bold">Default_Bold</string>
+    <string name="type">Type Face</string>
+    <string name="style">Style</string>
+    <string name="bold">Bold</string>
+    <string name="bold_italic">Bold_Italic</string>
+    <string name="italic">Italic</string>
+    <string name="normal">Normal</string>
+    <string name="Monospace">Monospace</string>
+    <string name="getInfo">Get Font Information</string>
+    <string name="color">Color</string>
+</resources>

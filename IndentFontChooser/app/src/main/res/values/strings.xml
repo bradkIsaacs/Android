@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IndentFontChooser</string>
+    <string name="Typeface">Typeface Choosen</string>
+    <string name="Style">Style Choosen</string>
+</resources>

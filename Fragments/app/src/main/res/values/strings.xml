@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="settings_fragment">Settings Fragment</string>
+    <string name="first_name">Enter First Name</string>
+    <string name="last_name">Enter Last Name</string>
+    <string name="submit">Submit First and Last Name</string>
+    <string name="display_fragment">Display Fragment</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlashBeepShake</string>
+    <string name="beep">Create Beep</string>
+    <string name="on">Flashlight On</string>
+    <string name="off">Flashlight Off</string>
+    <string name="vibrate">Make Phone Vibrate</string>
+</resources>

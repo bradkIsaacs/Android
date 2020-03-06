@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TwoActivities</string>
+    <string name="recieved">Show Result</string>
+    <string name="get">Get A Number</string>
+</resources>

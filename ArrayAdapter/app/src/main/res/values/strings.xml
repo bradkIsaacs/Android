@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ArrayAdapter</string>
+    <string name="game_name">Name of Game</string>
+    <string name="min_player">Min # of Players</string>
+    <string name="max_player">Max # of Players</string>
+    <string name="add_game">Add Game</string>
+    <string name="gameLibrary">My Game Library</string>
+    <string name="gameBag">My Game Bag</string>
+    <string name="sendGameBag">Send My Game Bag</string>
+</resources>

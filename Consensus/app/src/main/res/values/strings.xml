@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Consensus</string>
+    <string name="game_library">My Game Library</string>
+    <string name="game_bag">My Game Bag</string>
+    <string name="send_game_bag">Send My Game Bag</string>
+    <string name="game_name">Name Of Game</string>
+    <string name="add_game_name">Add Game to My Library</string>
+    <string name="SHARED_PREFERENCES_PAGE">SP</string>
+    <string name="GAME_LIBRARY_KEY">GAME_LIBRARY</string>
+    <string name="GAME_BAG_KEY">GAME_BAG</string>
+    <string name="game_min_players">Min # of Players</string>
+    <string name="game_max_players">Max # of Players</string>
+</resources>
