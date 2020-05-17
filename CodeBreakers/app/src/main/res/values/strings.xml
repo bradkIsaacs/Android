@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Code Breakers</string>
+    <string name="difficulty">Set Difficulty</string>
+    <string name="cpu">vs CPU</string>
+    <string name="local_friend">vs Friend</string>
+    <string name="guesses">Number of Guesses</string>
+    <string name="code">Digit Codes</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+</resources>
