@@ -1,6 +1,8 @@
 package com.example.codebreakers;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     public void playVsCPU(View view) {
         if(difficulty==0){
             Toast.makeText(getApplicationContext(),"Please select a level of difficulty",Toast.LENGTH_LONG).show();
+        }
+        else if(difficulty==1){
+            startActivity(new Intent(this, Easy.class));
         }
     }
 
