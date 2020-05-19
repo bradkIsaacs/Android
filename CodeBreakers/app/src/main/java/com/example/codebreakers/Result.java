@@ -3,7 +3,9 @@ package com.example.codebreakers;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.TextView;
 
 public class Result extends AppCompatActivity {
@@ -28,12 +30,16 @@ public class Result extends AppCompatActivity {
         for(int i=0; i<array.length; i++){
             temp.append(array[i]+" ");
         }
+        MediaPlayer victory = MediaPlayer.create(this, R.raw.victory);
+        MediaPlayer fail = MediaPlayer.create(this, R.raw.fail);
         if(wl){
+            victory.start();
             text.setText("You Have Broken The Code");
             guesses.setText("It Took you "+num+" guesses");
             code.setText(temp);
         }
         else{
+            fail.start();
             text.setText("You Have Failed To Break The Code");
             guesses.setText("---------------------");
             code.setText(temp);
