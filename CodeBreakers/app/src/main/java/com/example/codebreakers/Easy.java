@@ -1,9 +1,9 @@
 package com.example.codebreakers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class Easy extends AppCompatActivity {
 
-    int c_place=0, i_place=0, guesses=12;
+    int c_place=0, i_place=0, guesses=0;
     String[] code = new String[4];
     String[] save_code = new String[4];
     String[] guess = new String[4];
@@ -94,7 +94,7 @@ public class Easy extends AppCompatActivity {
     }
 
     public void submitGuess(View view) {
-        guesses--;
+        guesses++;
         save_guess = guess.clone();
         cPlace(code, guess);
         iPlace(code, guess);
@@ -103,10 +103,18 @@ public class Easy extends AppCompatActivity {
         PreviousAdapter adapter = new PreviousAdapter(this, R.layout.my_array_adaptor, pList);
         myList.setAdapter(adapter);
         if(c_place == 4){
-            Toast.makeText(this,"You Have Won", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, Result.class);
+            i.putExtra("g", guesses);
+            i.putExtra("b", true);
+            i.putExtra("c", save_code);
+            startActivity(i);
         }
-        else if(guesses == 0){
-            Toast.makeText(this,"You've ran out of guesses\n Code was:"+save_code[0]+" "+save_code[1]+" "+save_code[2]+" "+save_code[3], Toast.LENGTH_LONG).show();
+        else if(guesses == 12){
+            Intent i = new Intent(this, Result.class);
+            i.putExtra("g", guesses);
+            i.putExtra("b", false);
+            i.putExtra("c", save_code);
+            startActivity(i);
         }
         resetPlaces();
         resetCode();
