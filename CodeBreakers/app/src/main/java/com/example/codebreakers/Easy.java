@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.webianks.library.scroll_choice.ScrollChoice;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,6 +15,7 @@ public class Easy extends AppCompatActivity {
 
     int c_place=0, i_place=0, guesses=0, left=12;
     String[] code = new String[4];
+    String[] sentCode = new String[4];
     String[] save_code = new String[4];
     String[] guess = new String[4];
     String[] save_guess = new String[4];
@@ -27,11 +24,13 @@ public class Easy extends AppCompatActivity {
     ListView myList;
     TextView remaining;
     ScrollChoice d1, d2, d3, d4;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy);
+        intent = getIntent();
         createCode();
         initViews();
         loadList();
@@ -67,9 +66,14 @@ public class Easy extends AppCompatActivity {
     }
 
     private void createCode() {
-        Random rand = new Random();
-        for (int i=0; i<code.length; i++){
-            code[i] = ""+rand.nextInt(9);
+        if(intent.getBooleanExtra("boolean", false)){
+            code = intent.getStringArrayExtra("code");
+        }
+        else {
+            Random rand = new Random();
+            for (int i = 0; i < code.length; i++) {
+                code[i] = "" + rand.nextInt(9);
+            }
         }
         save_code = code.clone();
     }

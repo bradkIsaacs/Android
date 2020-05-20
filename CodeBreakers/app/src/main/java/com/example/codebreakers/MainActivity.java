@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         if(difficulty==0){
             Toast.makeText(getApplicationContext(),"Please select a level of difficulty",Toast.LENGTH_LONG).show();
         }
+        else if(difficulty==1){
+            startActivity(new Intent(this, EasyFriend.class));
+        }
     }
 
     public void diffEasy(View view) {
