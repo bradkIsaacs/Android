@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         else if(difficulty==2){
             startActivity(new Intent(this, Medium.class));
         }
+        else{
+            startActivity(new Intent(this, Hard.class));
+        }
     }
 
     public void playVsFriend(View view) {

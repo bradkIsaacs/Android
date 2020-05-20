@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.webianks.library.scroll_choice.ScrollChoice;
 
@@ -15,7 +16,7 @@ import java.util.Random;
 
 public class Medium extends AppCompatActivity {
 
-    int c_place=0, i_place=0, guesses=0;
+    int c_place=0, i_place=0, guesses=0, left=10;
     String[] code = new String[5];
     String[] save_code = new String[5];
     String[] guess = new String[5];
@@ -23,6 +24,7 @@ public class Medium extends AppCompatActivity {
     List<String> digits = new ArrayList<>();
     List<Previous> pList = new ArrayList<>();
     ListView myList;
+    TextView remaining;
     ScrollChoice d1, d2, d3, d4, d5;
 
     @Override
@@ -32,6 +34,7 @@ public class Medium extends AppCompatActivity {
         createCode();
         initViews();
         loadList();
+        remaining.setText("Guesses Remaing: "+left);
         d1.addItems(digits, 0);
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
@@ -96,11 +99,13 @@ public class Medium extends AppCompatActivity {
         d3 = findViewById(R.id.medium_digit_3);
         d4 = findViewById(R.id.medium_digit_4);
         d5 = findViewById(R.id.medium_digit_5);
-        myList = findViewById(R.id.easy_list_view);
+        myList = findViewById(R.id.medium_list_view);
+        remaining = findViewById(R.id.medium_remaining);
     }
 
     public void submitGuess(View view) {
         guesses++;
+        left--;
         save_guess = guess.clone();
         cPlace(code, guess);
         iPlace(code, guess);
@@ -124,6 +129,8 @@ public class Medium extends AppCompatActivity {
         }
         resetPlaces();
         resetCode();
+        if(left>1){ remaining.setText("Guesses Remaing: "+left); }
+        else if(left==1){ remaining.setText("Final Guess"); }
     }
 
     private void resetCode() {

@@ -1,13 +1,12 @@
 package com.example.codebreakers;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.webianks.library.scroll_choice.ScrollChoice;
 
@@ -15,23 +14,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Easy extends AppCompatActivity {
+public class Hard extends AppCompatActivity {
 
-    int c_place=0, i_place=0, guesses=0, left=12;
-    String[] code = new String[4];
-    String[] save_code = new String[4];
-    String[] guess = new String[4];
-    String[] save_guess = new String[4];
+    int c_place=0, i_place=0, guesses=0, left=8;
+    String[] code = new String[6];
+    String[] save_code = new String[6];
+    String[] guess = new String[6];
+    String[] save_guess = new String[6];
     List<String> digits = new ArrayList<>();
     List<Previous> pList = new ArrayList<>();
     ListView myList;
     TextView remaining;
-    ScrollChoice d1, d2, d3, d4;
+    ScrollChoice d1, d2, d3, d4, d5, d6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_easy);
+        setContentView(R.layout.activity_hard);
         createCode();
         initViews();
         loadList();
@@ -40,6 +39,8 @@ public class Easy extends AppCompatActivity {
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
         d4.addItems(digits, 0);
+        d5.addItems(digits, 0);
+        d6.addItems(digits, 0);
         d1.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
             @Override
             public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
@@ -64,8 +65,19 @@ public class Easy extends AppCompatActivity {
                 guess[3] = name;
             }
         });
+        d5.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
+                guess[4] = name;
+            }
+        });
+        d6.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
+                guess[5] = name;
+            }
+        });
     }
-
     private void createCode() {
         Random rand = new Random();
         for (int i=0; i<code.length; i++){
@@ -89,12 +101,14 @@ public class Easy extends AppCompatActivity {
     }
 
     private void initViews() {
-        d1 = findViewById(R.id.easy_digit_1);
-        d2 = findViewById(R.id.easy_digit_2);
-        d3 = findViewById(R.id.easy_digit_3);
-        d4 = findViewById(R.id.easy_digit_4);
-        myList = findViewById(R.id.easy_list_view);
-        remaining = findViewById(R.id.easy_remaining);
+        d1 = findViewById(R.id.hard_digit_1);
+        d2 = findViewById(R.id.hard_digit_2);
+        d3 = findViewById(R.id.hard_digit_3);
+        d4 = findViewById(R.id.hard_digit_4);
+        d5 = findViewById(R.id.hard_digit_5);
+        d6 = findViewById(R.id.hard_digit_6);
+        myList = findViewById(R.id.hard_list_view);
+        remaining = findViewById(R.id.hard_remaining);
     }
 
     public void submitGuess(View view) {
@@ -114,7 +128,7 @@ public class Easy extends AppCompatActivity {
             i.putExtra("c", save_code);
             startActivity(i);
         }
-        else if(guesses == 12){
+        else if(guesses == 8){
             Intent i = new Intent(this, Result.class);
             i.putExtra("g", guesses);
             i.putExtra("b", false);
