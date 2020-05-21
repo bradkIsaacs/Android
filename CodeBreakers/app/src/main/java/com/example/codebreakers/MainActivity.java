@@ -49,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         else if(difficulty==1){
             startActivity(new Intent(this, EasyFriend.class));
         }
+        else if(difficulty==2){
+            startActivity(new Intent(this, MediumFriend.class));
+        }
+        else if(difficulty==3){
+            startActivity(new Intent(this, HardFriend.class));
+        }
     }
 
     public void diffEasy(View view) {

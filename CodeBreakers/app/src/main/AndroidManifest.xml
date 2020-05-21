@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EasyFriend"></activity>
+        <activity android:name=".HardFriend"></activity>
+        <activity android:name=".MediumFriend" />
+        <activity android:name=".EasyFriend" />
         <activity android:name=".Hard" />
         <activity android:name=".Medium" />
         <activity

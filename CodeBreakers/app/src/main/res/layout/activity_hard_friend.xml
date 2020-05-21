@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="#000"
     android:gravity="center"
-    tools:context=".EasyFriend">
+    tools:context=".HardFriend">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:orientation="horizontal">
 
         <com.webianks.library.scroll_choice.ScrollChoice
-            android:id="@+id/easy_friend_digit_1"
+            android:id="@+id/hard_friend_digit_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -30,7 +30,7 @@
             app:scroll_selected_item_text_color="#000"/>
 
         <com.webianks.library.scroll_choice.ScrollChoice
-            android:id="@+id/easy_friend_digit_2"
+            android:id="@+id/hard_friend_digit_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
             app:scroll_selected_item_text_color="#000"/>
 
         <com.webianks.library.scroll_choice.ScrollChoice
-            android:id="@+id/easy_friend_digit_3"
+            android:id="@+id/hard_friend_digit_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,7 +58,35 @@
             app:scroll_selected_item_text_color="#000"/>
 
         <com.webianks.library.scroll_choice.ScrollChoice
-            android:id="@+id/easy_friend_digit_4"
+            android:id="@+id/hard_friend_digit_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/hard_friend_digit_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/hard_friend_digit_6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -74,7 +102,7 @@
     </LinearLayout>
 
     <Button
-        android:onClick="easySetCode"
+        android:onClick="hardSetCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/make"/>

@@ -26,15 +26,17 @@ public class Medium extends AppCompatActivity {
     ListView myList;
     TextView remaining;
     ScrollChoice d1, d2, d3, d4, d5;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium);
+        intent = getIntent();
         createCode();
         initViews();
         loadList();
-        remaining.setText("Guesses Remaing: "+left);
+        remaining.setText("Guesses Remaining: "+left);
         d1.addItems(digits, 0);
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
@@ -72,9 +74,13 @@ public class Medium extends AppCompatActivity {
         });
     }
     private void createCode() {
-        Random rand = new Random();
-        for (int i=0; i<code.length; i++){
-            code[i] = ""+rand.nextInt(9);
+
+        if(intent.getBooleanExtra("boolean",false)) { code = intent.getStringArrayExtra("code"); }
+        else {
+            Random rand = new Random();
+            for (int i = 0; i < code.length; i++) {
+                code[i] = "" + rand.nextInt(9);
+            }
         }
         save_code = code.clone();
     }

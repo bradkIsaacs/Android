@@ -34,7 +34,7 @@ public class Easy extends AppCompatActivity {
         createCode();
         initViews();
         loadList();
-        remaining.setText("Guesses Remaing: "+left);
+        remaining.setText("Guesses Remaining: "+left);
         d1.addItems(digits, 0);
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
