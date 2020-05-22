@@ -17,8 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, MyService.class));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        startService(new Intent(this, MyService.class));
         setContentView(R.layout.activity_main);
         easy = findViewById(R.id.btn_main_easy);
         medium = findViewById(R.id.btn_main_medium);

@@ -19,6 +19,7 @@ public class Result extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        stopService(new Intent(this, MyService.class));
         text = findViewById(R.id.result_text);
         guesses = findViewById(R.id.result_guesses);
         code = findViewById(R.id.result_code);
@@ -35,12 +36,12 @@ public class Result extends AppCompatActivity {
         if(wl){
             victory.start();
             text.setText("You Have Broken The Code");
-            guesses.setText("It Took you "+num+" guesses");
+            guesses.setText("It took you "+num+" guesses");
             code.setText(temp);
         }
         else{
             fail.start();
-            text.setText("You Have Failed To Break The Code");
+            text.setText("You Failed To Break The Code in "+num+" guesses");
             guesses.setText("---------------------");
             code.setText(temp);
         }
