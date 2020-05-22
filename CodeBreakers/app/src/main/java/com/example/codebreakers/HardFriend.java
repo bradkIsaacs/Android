@@ -67,15 +67,6 @@ public class HardFriend extends AppCompatActivity {
                 code[5] = name;
             }
         });
-        updatetv();
-    }
-
-    private void updatetv() {
-        StringBuilder temp = new StringBuilder();
-        for(int i=0; i<code.length; i++){
-            temp.append(code[i]+" ");
-        }
-        tv.setText(temp);
     }
 
     private void initViews() {
@@ -85,7 +76,6 @@ public class HardFriend extends AppCompatActivity {
         d4 = findViewById(R.id.hard_friend_digit_4);
         d5 = findViewById(R.id.hard_friend_digit_5);
         d6 = findViewById(R.id.hard_friend_digit_6);
-        tv = findViewById(R.id.hard_friend_test);
     }
 
     private void loadList() {
@@ -107,6 +97,5 @@ public class HardFriend extends AppCompatActivity {
         intent.putExtra("code", code);
         intent.putExtra("boolean", true);
         startActivity(intent);
-        //updatetv();
     }
 }

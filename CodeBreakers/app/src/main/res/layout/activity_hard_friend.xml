@@ -107,10 +107,4 @@
         android:layout_height="wrap_content"
         android:text="@string/make"/>
 
-    <TextView
-        android:id="@+id/hard_friend_test"
-        android:background="#fff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
 </LinearLayout>
