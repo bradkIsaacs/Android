@@ -26,11 +26,13 @@ public class Hard extends AppCompatActivity {
     ListView myList;
     TextView remaining;
     ScrollChoice d1, d2, d3, d4, d5, d6;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hard);
+        intent = getIntent();
         createCode();
         initViews();
         loadList();
@@ -79,9 +81,13 @@ public class Hard extends AppCompatActivity {
         });
     }
     private void createCode() {
-        Random rand = new Random();
-        for (int i=0; i<code.length; i++){
-            code[i] = ""+rand.nextInt(9);
+
+        if(intent.getBooleanExtra("boolean", false)){code = intent.getStringArrayExtra("code");}
+        else{
+            Random rand = new Random();
+                for (int i=0; i<code.length; i++){
+                    code[i] = ""+rand.nextInt(9);
+            }
         }
         save_code = code.clone();
     }

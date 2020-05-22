@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.webianks.library.scroll_choice.ScrollChoice;
 
@@ -15,6 +16,7 @@ public class HardFriend extends AppCompatActivity {
 
     String[] code = new String[6];
     ScrollChoice d1, d2, d3, d4, d5, d6;
+    TextView tv;
     List<String> digits = new ArrayList<>();
 
     @Override
@@ -65,6 +67,15 @@ public class HardFriend extends AppCompatActivity {
                 code[5] = name;
             }
         });
+        updatetv();
+    }
+
+    private void updatetv() {
+        StringBuilder temp = new StringBuilder();
+        for(int i=0; i<code.length; i++){
+            temp.append(code[i]+" ");
+        }
+        tv.setText(temp);
     }
 
     private void initViews() {
@@ -74,9 +85,11 @@ public class HardFriend extends AppCompatActivity {
         d4 = findViewById(R.id.hard_friend_digit_4);
         d5 = findViewById(R.id.hard_friend_digit_5);
         d6 = findViewById(R.id.hard_friend_digit_6);
+        tv = findViewById(R.id.hard_friend_test);
     }
 
     private void loadList() {
+        digits.add("x");
         digits.add("0");
         digits.add("1");
         digits.add("2");
@@ -94,5 +107,6 @@ public class HardFriend extends AppCompatActivity {
         intent.putExtra("code", code);
         intent.putExtra("boolean", true);
         startActivity(intent);
+        //updatetv();
     }
 }

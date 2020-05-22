@@ -61,6 +61,7 @@ public class EasyFriend extends AppCompatActivity {
     }
 
     private void loadList() {
+        digits.add("x");
         digits.add("0");
         digits.add("1");
         digits.add("2");
