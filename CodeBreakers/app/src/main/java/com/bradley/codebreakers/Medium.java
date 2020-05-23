@@ -1,4 +1,4 @@
-package com.example.codebreakers;
+package com.bradley.codebreakers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,24 +14,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Hard extends AppCompatActivity {
+public class Medium extends AppCompatActivity {
 
-    int c_place=0, i_place=0, guesses=0, left=8;
-    String[] code = new String[6];
-    String[] save_code = new String[6];
-    String[] guess = new String[6];
-    String[] save_guess = new String[6];
+    int c_place=0, i_place=0, guesses=0, left=10;
+    String[] code = new String[5];
+    String[] save_code = new String[5];
+    String[] guess = new String[5];
+    String[] save_guess = new String[5];
     List<String> digits = new ArrayList<>();
     List<Previous> pList = new ArrayList<>();
     ListView myList;
     TextView remaining;
-    ScrollChoice d1, d2, d3, d4, d5, d6;
+    ScrollChoice d1, d2, d3, d4, d5;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hard);
+        setContentView(R.layout.activity_medium);
         intent = getIntent();
         createCode();
         initViews();
@@ -42,7 +42,6 @@ public class Hard extends AppCompatActivity {
         d3.addItems(digits, 0);
         d4.addItems(digits, 0);
         d5.addItems(digits, 0);
-        d6.addItems(digits, 0);
         d1.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
             @Override
             public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
@@ -73,20 +72,14 @@ public class Hard extends AppCompatActivity {
                 guess[4] = name;
             }
         });
-        d6.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
-                guess[5] = name;
-            }
-        });
     }
     private void createCode() {
 
-        if(intent.getBooleanExtra("boolean", false)){code = intent.getStringArrayExtra("code");}
-        else{
+        if(intent.getBooleanExtra("boolean",false)) { code = intent.getStringArrayExtra("code"); }
+        else {
             Random rand = new Random();
-                for (int i=0; i<code.length; i++){
-                    code[i] = ""+rand.nextInt(9);
+            for (int i = 0; i < code.length; i++) {
+                code[i] = "" + rand.nextInt(9);
             }
         }
         save_code = code.clone();
@@ -107,14 +100,13 @@ public class Hard extends AppCompatActivity {
     }
 
     private void initViews() {
-        d1 = findViewById(R.id.hard_digit_1);
-        d2 = findViewById(R.id.hard_digit_2);
-        d3 = findViewById(R.id.hard_digit_3);
-        d4 = findViewById(R.id.hard_digit_4);
-        d5 = findViewById(R.id.hard_digit_5);
-        d6 = findViewById(R.id.hard_digit_6);
-        myList = findViewById(R.id.hard_list_view);
-        remaining = findViewById(R.id.hard_remaining);
+        d1 = findViewById(R.id.medium_digit_1);
+        d2 = findViewById(R.id.medium_digit_2);
+        d3 = findViewById(R.id.medium_digit_3);
+        d4 = findViewById(R.id.medium_digit_4);
+        d5 = findViewById(R.id.medium_digit_5);
+        myList = findViewById(R.id.medium_list_view);
+        remaining = findViewById(R.id.medium_remaining);
     }
 
     public void submitGuess(View view) {
@@ -134,7 +126,7 @@ public class Hard extends AppCompatActivity {
             i.putExtra("c", save_code);
             startActivity(i);
         }
-        else if(guesses == 8){
+        else if(guesses == 10){
             Intent i = new Intent(this, Result.class);
             i.putExtra("g", guesses);
             i.putExtra("b", false);

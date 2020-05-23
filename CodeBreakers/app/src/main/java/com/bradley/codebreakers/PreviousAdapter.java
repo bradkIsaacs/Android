@@ -1,4 +1,4 @@
-package com.example.codebreakers;
+package com.bradley.codebreakers;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class PreviousAdapter extends ArrayAdapter<Previous> {

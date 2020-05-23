@@ -1,26 +1,28 @@
-package com.example.codebreakers;
+package com.bradley.codebreakers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.webianks.library.scroll_choice.ScrollChoice;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MediumFriend extends AppCompatActivity {
+public class HardFriend extends AppCompatActivity {
 
-    String[] code = new String[5];
-    ScrollChoice d1, d2, d3, d4, d5;
+    String[] code = new String[6];
+    ScrollChoice d1, d2, d3, d4, d5, d6;
+    TextView tv;
     List<String> digits = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medium_friend);
+        setContentView(R.layout.activity_hard_friend);
         initViews();
         loadList();
         d1.addItems(digits, 0);
@@ -28,6 +30,7 @@ public class MediumFriend extends AppCompatActivity {
         d3.addItems(digits, 0);
         d4.addItems(digits, 0);
         d5.addItems(digits, 0);
+        d6.addItems(digits, 0);
         d1.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
             @Override
             public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
@@ -58,14 +61,21 @@ public class MediumFriend extends AppCompatActivity {
                 code[4] = name;
             }
         });
+        d6.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
+                code[5] = name;
+            }
+        });
     }
 
     private void initViews() {
-        d1 = findViewById(R.id.medium_friend_digit_1);
-        d2 = findViewById(R.id.medium_friend_digit_2);
-        d3 = findViewById(R.id.medium_friend_digit_3);
-        d4 = findViewById(R.id.medium_friend_digit_4);
-        d5 = findViewById(R.id.medium_friend_digit_5);
+        d1 = findViewById(R.id.hard_friend_digit_1);
+        d2 = findViewById(R.id.hard_friend_digit_2);
+        d3 = findViewById(R.id.hard_friend_digit_3);
+        d4 = findViewById(R.id.hard_friend_digit_4);
+        d5 = findViewById(R.id.hard_friend_digit_5);
+        d6 = findViewById(R.id.hard_friend_digit_6);
     }
 
     private void loadList() {
@@ -82,8 +92,8 @@ public class MediumFriend extends AppCompatActivity {
         digits.add("9");
     }
 
-    public void mediumSetCode(View view) {
-        Intent intent = new Intent(this, Medium.class);
+    public void hardSetCode(View view) {
+        Intent intent = new Intent(this, Hard.class);
         intent.putExtra("code", code);
         intent.putExtra("boolean", true);
         startActivity(intent);

@@ -1,4 +1,4 @@
-package com.example.codebreakers;
+package com.bradley.codebreakers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,22 +11,23 @@ import com.webianks.library.scroll_choice.ScrollChoice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EasyFriend extends AppCompatActivity {
+public class MediumFriend extends AppCompatActivity {
 
-    String[] code = new String[4];
-    ScrollChoice d1, d2, d3, d4;
+    String[] code = new String[5];
+    ScrollChoice d1, d2, d3, d4, d5;
     List<String> digits = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_easy_friend);
+        setContentView(R.layout.activity_medium_friend);
         initViews();
         loadList();
         d1.addItems(digits, 0);
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
         d4.addItems(digits, 0);
+        d5.addItems(digits, 0);
         d1.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
             @Override
             public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
@@ -51,13 +52,20 @@ public class EasyFriend extends AppCompatActivity {
                 code[3] = name;
             }
         });
+        d5.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
+                code[4] = name;
+            }
+        });
     }
 
     private void initViews() {
-        d1 = findViewById(R.id.easy_friend_digit_1);
-        d2 = findViewById(R.id.easy_friend_digit_2);
-        d3 = findViewById(R.id.easy_friend_digit_3);
-        d4 = findViewById(R.id.easy_friend_digit_4);
+        d1 = findViewById(R.id.medium_friend_digit_1);
+        d2 = findViewById(R.id.medium_friend_digit_2);
+        d3 = findViewById(R.id.medium_friend_digit_3);
+        d4 = findViewById(R.id.medium_friend_digit_4);
+        d5 = findViewById(R.id.medium_friend_digit_5);
     }
 
     private void loadList() {
@@ -74,8 +82,8 @@ public class EasyFriend extends AppCompatActivity {
         digits.add("9");
     }
 
-    public void easySetCode(View view) {
-        Intent intent = new Intent(this, Easy.class);
+    public void mediumSetCode(View view) {
+        Intent intent = new Intent(this, Medium.class);
         intent.putExtra("code", code);
         intent.putExtra("boolean", true);
         startActivity(intent);

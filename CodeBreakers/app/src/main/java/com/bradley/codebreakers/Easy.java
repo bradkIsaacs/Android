@@ -1,37 +1,35 @@
-package com.example.codebreakers;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.bradley.codebreakers;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.webianks.library.scroll_choice.ScrollChoice;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Medium extends AppCompatActivity {
+public class Easy extends AppCompatActivity {
 
-    int c_place=0, i_place=0, guesses=0, left=10;
-    String[] code = new String[5];
-    String[] save_code = new String[5];
-    String[] guess = new String[5];
-    String[] save_guess = new String[5];
+    int c_place=0, i_place=0, guesses=0, left=12;
+    String[] code = new String[4];
+    String[] sentCode = new String[4];
+    String[] save_code = new String[4];
+    String[] guess = new String[4];
+    String[] save_guess = new String[4];
     List<String> digits = new ArrayList<>();
     List<Previous> pList = new ArrayList<>();
     ListView myList;
     TextView remaining;
-    ScrollChoice d1, d2, d3, d4, d5;
+    ScrollChoice d1, d2, d3, d4;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medium);
+        setContentView(R.layout.activity_easy);
         intent = getIntent();
         createCode();
         initViews();
@@ -41,7 +39,6 @@ public class Medium extends AppCompatActivity {
         d2.addItems(digits, 0);
         d3.addItems(digits, 0);
         d4.addItems(digits, 0);
-        d5.addItems(digits, 0);
         d1.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
             @Override
             public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
@@ -66,16 +63,12 @@ public class Medium extends AppCompatActivity {
                 guess[3] = name;
             }
         });
-        d5.setOnItemSelectedListener(new ScrollChoice.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(ScrollChoice scrollChoice, int position, String name) {
-                guess[4] = name;
-            }
-        });
     }
-    private void createCode() {
 
-        if(intent.getBooleanExtra("boolean",false)) { code = intent.getStringArrayExtra("code"); }
+    private void createCode() {
+        if(intent.getBooleanExtra("boolean", false)){
+            code = intent.getStringArrayExtra("code");
+        }
         else {
             Random rand = new Random();
             for (int i = 0; i < code.length; i++) {
@@ -100,13 +93,12 @@ public class Medium extends AppCompatActivity {
     }
 
     private void initViews() {
-        d1 = findViewById(R.id.medium_digit_1);
-        d2 = findViewById(R.id.medium_digit_2);
-        d3 = findViewById(R.id.medium_digit_3);
-        d4 = findViewById(R.id.medium_digit_4);
-        d5 = findViewById(R.id.medium_digit_5);
-        myList = findViewById(R.id.medium_list_view);
-        remaining = findViewById(R.id.medium_remaining);
+        d1 = findViewById(R.id.easy_digit_1);
+        d2 = findViewById(R.id.easy_digit_2);
+        d3 = findViewById(R.id.easy_digit_3);
+        d4 = findViewById(R.id.easy_digit_4);
+        myList = findViewById(R.id.easy_list_view);
+        remaining = findViewById(R.id.easy_remaining);
     }
 
     public void submitGuess(View view) {
@@ -126,7 +118,7 @@ public class Medium extends AppCompatActivity {
             i.putExtra("c", save_code);
             startActivity(i);
         }
-        else if(guesses == 10){
+        else if(guesses == 12){
             Intent i = new Intent(this, Result.class);
             i.putExtra("g", guesses);
             i.putExtra("b", false);

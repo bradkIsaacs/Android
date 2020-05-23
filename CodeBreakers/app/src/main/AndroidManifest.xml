@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.codebreakers">
+    package="com.bradley.codebreakers">
 
     <application
         android:allowBackup="true"
@@ -8,22 +8,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HardFriend"/>
-        <activity android:name=".MediumFriend" />
-        <activity android:name=".EasyFriend" />
-        <activity android:name=".Hard" />
-        <activity android:name=".Medium" />
+        <activity android:name="com.bradley.codebreakers.HardFriend"/>
+        <activity android:name="com.bradley.codebreakers.MediumFriend" />
+        <activity android:name="com.bradley.codebreakers.EasyFriend" />
+        <activity android:name="com.bradley.codebreakers.Hard" />
+        <activity android:name="com.bradley.codebreakers.Medium" />
         <activity
-            android:name=".Result"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Easy" />
-        <activity android:name=".MainActivity" android:screenOrientation="unspecified">
+            android:name="com.bradley.codebreakers.Result"
+            android:parentActivityName="com.bradley.codebreakers.MainActivity"/>
+        <activity android:name="com.bradley.codebreakers.Easy" />
+        <activity android:name="com.bradley.codebreakers.MainActivity" android:screenOrientation="unspecified">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MyService"/>
+        <service android:name="com.bradley.codebreakers.MyService"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.codebreakers;
+package com.bradley.codebreakers;
 
 public class Previous {
     private String[] guess;
