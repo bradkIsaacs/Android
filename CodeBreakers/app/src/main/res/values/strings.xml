@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Code Breakers</string>
+    <string name="CPU">Vs CPU</string>
+    <string name="Friend">Vs Friend</string>
+    <string name="Easy">Easy</string>
+    <string name="Medium">Medium</string>
+    <string name="Hard">Hard</string>
+    <string name="easyRemaining">Guesses Remaining: 12</string>
+    <string name="guess">Guess</string>
+    <string name="hardRemaining">Guesses Remaining: 8</string>
+    <string name="mediumRemaining">Guesses Remaining: 10</string>
+    <string name="create">Submit Code</string>
+</resources>

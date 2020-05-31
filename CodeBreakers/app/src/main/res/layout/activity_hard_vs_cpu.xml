@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    tools:context=".HardVsCPU">
+
+    <TextView
+        android:id="@+id/tv_hardVsCPU_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hardRemaining"
+        android:background="#fff"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/sc_hardVsCPU_d6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:scroll_background_color="#000"
+            app:scroll_selected_item_background="#fff"
+            app:scroll_item_text_color="#000"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#fff"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="center"
+        android:text="@string/guess"
+        android:onClick="submitGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/lv_hardVsCPU_list"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

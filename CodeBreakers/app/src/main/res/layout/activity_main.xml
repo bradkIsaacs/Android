@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:onClick="vsCPU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CPU"/>
+
+    <Button
+        android:onClick="vsFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Friend"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_main_easy"
+            android:onClick="Easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Easy"/>
+
+        <Button
+            android:id="@+id/btn_main_medium"
+            android:onClick="Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Medium"/>
+
+        <Button
+            android:id="@+id/btn_main_hard"
+            android:onClick="Hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Hard"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_main_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>
