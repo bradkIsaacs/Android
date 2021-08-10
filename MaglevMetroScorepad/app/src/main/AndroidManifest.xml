@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaglevMetroScorepad">
-        <activity android:name=".GameHistory"></activity>
+        <activity android:name=".GameHistory" />
         <activity android:name=".ShowScores" />
         <activity android:name=".BonusCard4" />
         <activity android:name=".BonusCard3" />
