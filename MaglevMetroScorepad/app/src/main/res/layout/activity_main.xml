@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:background="@drawable/game_pic"
+    android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
     <Button
+        android:layout_marginTop="390dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score a new game"
