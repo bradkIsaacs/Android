@@ -2,4 +2,9 @@
     <string name="app_name">Curators Scorepad</string>
     <string name="score_game">Score a new game</string>
     <string name="view_history">View game history</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player3">Player 3</string>
+    <string name="player4">Player 4</string>
+    <string name="submit">Submit</string>
 </resources>
