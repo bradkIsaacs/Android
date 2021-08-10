@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CuratorsScorepad">
-        <activity android:name=".Players"/>
+        <activity android:name=".History" />
+        <activity android:name=".ShowScores" />
+        <activity android:name=".Advanced" />
+        <activity android:name=".Objects" />
+        <activity android:name=".Wings" />
+        <activity android:name=".Contracts" />
+        <activity android:name=".Money" />
+        <activity android:name=".Players" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
