@@ -14,4 +14,5 @@
     <string name="advanced">Advanced Scoring (Follow card description)</string>
     <string name="advancedRules">Playing with an advanced rule card?</string>
     <string name="exit">Back To Home Screen</string>
+    <string name="clear">Clear Game History</string>
 </resources>
