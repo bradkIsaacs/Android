@@ -22,4 +22,17 @@
         android:text="@string/view_history"
         android:id="@+id/btn_history"/>
 
+    <TextView
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/advancedRules"/>
+
+    <Switch
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swi_advanced"/>
+
+
 </LinearLayout>

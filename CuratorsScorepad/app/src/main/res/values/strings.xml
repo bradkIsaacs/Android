@@ -7,4 +7,11 @@
     <string name="player3">Player 3</string>
     <string name="player4">Player 4</string>
     <string name="submit">Submit</string>
+    <string name="money">Money Scoring ($4,000 = 1vp)</string>
+    <string name="contract">Contract Scoring (Score Xvp per completed contract)</string>
+    <string name="wing">Wings Scoring (Score Xvp per completed wing)</string>
+    <string name="object">Object Scoring (1vp per object in museum)</string>
+    <string name="advanced">Advanced Scoring (Follow card description)</string>
+    <string name="advancedRules">Playing with an advanced rule card?</string>
+    <string name="exit">Back To Home Screen</string>
 </resources>
