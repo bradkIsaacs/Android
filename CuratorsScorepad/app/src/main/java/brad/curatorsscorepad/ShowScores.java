@@ -51,6 +51,7 @@ public class ShowScores extends AppCompatActivity {
             game += "-------------------------------------------------------------------------------,";
             editor.putString(LIST, game).commit();
             startActivity(new Intent(this,MainActivity.class));
+            finish();
         });
     }
 }

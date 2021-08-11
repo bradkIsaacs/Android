@@ -47,6 +47,7 @@ public class Contracts extends AppCompatActivity {
                 Globe.setP3Score(Integer.parseInt(p3Score.getText().toString()));
                 Globe.setP4Score(Integer.parseInt(p4Score.getText().toString()));
                 startActivity(new Intent(this, Wings.class));
+                finish();
             }
         });
     }

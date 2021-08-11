@@ -49,8 +49,13 @@ public class Objects extends AppCompatActivity {
                 Globe.setP2Score(Integer.parseInt(p2Score.getText().toString()));
                 Globe.setP3Score(Integer.parseInt(p3Score.getText().toString()));
                 Globe.setP4Score(Integer.parseInt(p4Score.getText().toString()));
-                if(advanced){startActivity(new Intent(this,Advanced.class));}
-                else{startActivity(new Intent(this, ShowScores.class));}
+                if(advanced){
+                    startActivity(new Intent(this,Advanced.class));
+                    finish();
+                } else {
+                    startActivity(new Intent(this, ShowScores.class));
+                    finish();
+                }
             }
         });
     }

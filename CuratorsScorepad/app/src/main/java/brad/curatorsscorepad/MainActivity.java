@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             if(advanced.isChecked()){Globe.setAdvanced(true);}
             else{Globe.setAdvanced(false);}
             startActivity(new Intent(this, Players.class));
+            finish();
         });
 
         history.setOnClickListener(v ->{

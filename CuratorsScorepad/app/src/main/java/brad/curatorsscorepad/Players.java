@@ -35,6 +35,7 @@ public class Players extends AppCompatActivity {
                 Globe.setP3(p3Name.getText().toString());
                 Globe.setP4(p4Name.getText().toString());
                 startActivity(new Intent(this,Money.class));
+                finish();
             }
         });
     }
