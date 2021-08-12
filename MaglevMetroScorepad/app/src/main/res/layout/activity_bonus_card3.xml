@@ -5,11 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/game_pic"
+    android:gravity="center_horizontal"
     tools:context=".BonusCard3">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_marginTop="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:text="Points for Third Bonus Card"
         android:gravity="center"/>
 
@@ -17,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="4"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <TextView
@@ -50,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="4"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <EditText

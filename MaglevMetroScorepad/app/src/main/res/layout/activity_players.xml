@@ -5,27 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/game_pic"
     android:gravity="center_horizontal"
     tools:context=".Players">
 
     <EditText
+        android:layout_marginTop="400dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:inputType="text"
         android:hint="Player 1"
         android:id="@+id/et_Player1"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:inputType="text"
         android:hint="Player 2"
         android:id="@+id/et_Player2"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:inputType="text"
         android:hint="Player 3"
         android:id="@+id/et_Player3"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:inputType="text"
         android:hint="Player 4"
         android:id="@+id/et_Player4"/>
     <Button
