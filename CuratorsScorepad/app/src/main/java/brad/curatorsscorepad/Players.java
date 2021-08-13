@@ -39,4 +39,9 @@ public class Players extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, ScrapGame.class));
+    }
 }

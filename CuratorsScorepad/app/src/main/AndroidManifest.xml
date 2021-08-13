@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CuratorsScorepad">
+        <activity android:name=".ScrapGame" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".ExitApplication" android:theme="@style/TranslucentTheme"/>
         <activity android:name=".History" />
         <activity android:name=".ShowScores" />
         <activity android:name=".Advanced" />

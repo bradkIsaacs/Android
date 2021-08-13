@@ -54,4 +54,9 @@ public class ShowScores extends AppCompatActivity {
             finish();
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, ScrapGame.class));
+    }
 }

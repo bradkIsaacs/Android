@@ -13,6 +13,10 @@
     <string name="object">Object Scoring (1vp per object in museum)</string>
     <string name="advanced">Advanced Scoring (Follow card description)</string>
     <string name="advancedRules">Playing with an advanced rule card?</string>
-    <string name="exit">Back To Home Screen</string>
+    <string name="exitApplication">Wanting to leave Curators Scorepad?</string>
+    <string name="scrapGame">Would you like to scrap this game?</string>
+    <string name="exit">Score Game</string>
     <string name="clear">Clear Game History</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 </resources>

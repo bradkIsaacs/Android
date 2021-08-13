@@ -51,4 +51,9 @@ public class Advanced extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, ScrapGame.class));
+    }
 }

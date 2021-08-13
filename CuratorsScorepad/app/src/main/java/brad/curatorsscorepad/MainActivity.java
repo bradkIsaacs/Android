@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this,History.class));
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, ExitApplication.class));
+    }
 }
