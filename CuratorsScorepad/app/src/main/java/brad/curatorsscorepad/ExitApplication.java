@@ -24,7 +24,7 @@ public class ExitApplication extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.6));
+        getWindow().setLayout((int)(width*.8),(int)(height*.4));
 
         yes.setOnClickListener(v -> {
             this.finishAffinity();
@@ -33,5 +33,9 @@ public class ExitApplication extends AppCompatActivity {
         no.setOnClickListener(v -> {
             finish();
         });
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

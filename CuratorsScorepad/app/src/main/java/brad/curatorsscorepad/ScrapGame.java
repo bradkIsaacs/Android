@@ -25,7 +25,7 @@ public class ScrapGame extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.6));
+        getWindow().setLayout((int)(width*.8),(int)(height*.4));
 
         yes.setOnClickListener(v -> {
             startActivity(new Intent(this, MainActivity.class));
@@ -34,5 +34,9 @@ public class ScrapGame extends AppCompatActivity {
         no.setOnClickListener(v -> {
             finish();
         });
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }
